@@ -42,8 +42,6 @@ main {
   transition: all 0.5s ease;
 }
 .sidebar .logo-details .logo_name {
-  /*color: #fff;*/
-  color: #426696;
   color: #2e6873;
   font-size: 20px;
   font-weight: 600;
@@ -70,7 +68,6 @@ main {
   text-align: right;
 }
 .sidebar i {
-  color: #fff;
   color: #2e6873;
   height: 60px;
   min-width: 50px;
@@ -79,7 +76,8 @@ main {
   line-height: 60px;
 }
 .sidebar .nav-list {
-  margin-top: 20px;
+  /*padding: 50% 0 0 0;*/
+  margin-top: 30px;
   height: 100%;
 }
 .sidebar li {
@@ -112,42 +110,7 @@ main {
 .sidebar.open li .tooltip {
   display: none;
 }
-.sidebar input {
-  font-size: 15px;
-  color: #fff;
-  font-weight: 400;
-  outline: none;
-  height: 50px;
-  width: 100%;
-  width: 50px;
-  border: none;
-  border-radius: 12px;
-  transition: all 0.5s ease;
-  background: #1d1b31;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-}
-.sidebar.open input {
-  padding: 0 20px 0 50px;
-  width: 100%;
-}
-.sidebar .bx-search {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  font-size: 22px;
-  background: #1d1b31;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-  color: #fff;
-}
-.sidebar.open .bx-search:hover {
-  background: #1d1b31;
-  color: #fff;
-}
-.sidebar .bx-search:hover {
-  background: #fff;
-  color: #11101d;
-}
+
 .sidebar li a {
   display: flex;
   height: 100%;
