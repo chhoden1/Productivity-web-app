@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title> SITENAME </title>
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/session.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -55,21 +56,27 @@
   <div class="circle2"></div>
 
   <!-- SESSION SECTION -->
-  <section class="session-section">
+  <section class="main-section">
       <div class="text">Session</div>
-      <form class="form" method="post" action="#">
-        <h1>Start a session</h1>
-        <div class="session-form-container">
-        <!--<label for="session-title" class="session-title">Session Title:</label><br>-->
-        <input class="session-input" type="text" name="session-title" placeholder="Enter a session title"><br>
-        </div>
-        <div class="btn-container">
-            <!--<button type="button" class="startbtn">Start</button>-->
-            <p class="submit"><input type="submit" name="sent" value="Start"></p>
+
+      <!--Session Form-->
+      <div class="Session-form">
+        <div class="form">
+          <h1>Start a session</h1>
+          <div class="session-form-container">
+          <input class="session-input" type="text" name="session-title" placeholder="Enter a session title"><br>
           </div>
-      </form>
+          <div class="btn-container">
+            <a href="session-features.html">
+              <button onclick="getInputValue()" type="submit" value="Start">Start</button>
+            </a>
+            </div>
+          </div>
+      </div>
+
   </section>
 
+  <script src="../js/main.js"></script>
   <script src="../js/session.js"></script>
 </main>
 </body>
