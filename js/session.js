@@ -2,24 +2,16 @@
 
 /* For Session Title input */
 function getInputValue() {
-    var inputVal = document.getElementsByClassName('session-input')[0].value;
-    if (inputVal == "") {
+    // variable for user input
+    //var inputVal = document.getElementsByClassName('session-input')[0].value;
+    localStorage.name = document.getElementsByClassName('session-input')[0].value;
+    // if input is empty
+    if (localStorage.name == "") {
+        // alert the user to input something
         alert("Please enter a session title");
     } else {
-        console.log(inputVal);
-        hide();
-        document.getElementById("Session-title").innerHTML = inputVal;
+        // otherwise, continue on with session
+        console.log(localStorage.name);
+        location.href='session-features.html';
     }
 }
-// makes form disappear after clicking "start" button
-var sessionForm = document.getElementsByClassName('Session-form');
-function hide() {
-    sessionForm[0].style.display = 'none';
-}
-
-// makes form reappear after clicking "end" button
-function showForm() {
-    sessionForm[0].style.display = "contents";
-}
-
-
