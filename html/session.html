@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title> SITENAME </title>
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/session.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
     </div>
     <ul class="nav-list">
       <li>
-        <a href="#">
+        <a href="home.html">
           <i class='bx bx-user' ></i>
           <span class="links_name">User</span>
         </a>
@@ -33,7 +33,7 @@
          <span class="tooltip">Boards</span>
       </li>
       <li>
-        <a href="session.html">
+        <a href="#">
           <i class='bx bx-time'></i>
           <span class="links_name">Session</span>
         </a>
@@ -53,11 +53,24 @@
   </div>
   <div class="circle1"></div>
   <div class="circle2"></div>
-  <section class="home-section">
-      <div class="text">User</div>
+
+  <!-- SESSION SECTION -->
+  <section class="session-section">
+      <div class="text">Session</div>
+      <form class="form" method="post" action="#">
+        <h1>Start a session</h1>
+        <div class="session-form-container">
+        <!--<label for="session-title" class="session-title">Session Title:</label><br>-->
+        <input class="session-input" type="text" name="session-title" placeholder="Enter a session title"><br>
+        </div>
+        <div class="btn-container">
+            <!--<button type="button" class="startbtn">Start</button>-->
+            <p class="submit"><input type="submit" name="sent" value="Start"></p>
+          </div>
+      </form>
   </section>
 
-  <script src="../js/home.js"></script>
+  <script src="../js/session.js"></script>
 </main>
 </body>
 </html>
