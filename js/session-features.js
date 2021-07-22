@@ -3,3 +3,7 @@
 // updates session title
 document.getElementById("session-title").innerHTML = localStorage.name;
 
+/* To end session */
+function endSession() {
+    location.href='session.html';
+}
