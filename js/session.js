@@ -2,16 +2,16 @@
 
 /* For Session Title input */
 function getInputValue() {
-    // variable for user input
-    //var inputVal = document.getElementsByClassName('session-input')[0].value;
-    localStorage.name = document.getElementsByClassName('session-input')[0].value;
+    // stores user input in window session storage
+    sessionStorage.setItem("sessionTitle", document.getElementsByClassName('session-input')[0].value);
+    var userInput = sessionStorage.getItem("sessionTitle");
     // if input is empty
-    if (localStorage.name == "") {
+    if (userInput == "") {
         // alert the user to input something
         alert("Please enter a session title");
     } else {
         // otherwise, continue on with session
-        console.log(localStorage.name);
+        console.log(userInput);
         location.href='session-features.html';
     }
 }

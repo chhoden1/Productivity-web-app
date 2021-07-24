@@ -1,1 +1,146 @@
 /* Specific CSS for home (user) page */
+
+.main-section .profile-details {
+  transition: all 0.5s ease;
+  overflow: hidden;
+  text-align: center;
+}
+
+.profile-details img {
+  height: 65px;
+  width: 65px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+  border-radius: 50% 50% 50% 50%;
+  /* border-radius: 6px; */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+  font-size: 20px;
+  color: #2e6873;
+}
+
+.user-details {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  position: relative;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/***** For calendar *****/
+.calendar-container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dycalendar {
+  width: 100%;
+  padding: 20px;
+}
+
+#dycalendar table {
+  width: 100%;
+  margin-top: 40px;
+}
+
+#dycalendar table td {
+  color: rgb(66, 66, 66);
+  color: black;
+  padding: 10px;
+  border-radius: 4px;
+  /* font-weight: 600; */
+}
+
+#dycalendar table td:hover {
+  background: white;
+  color: black !important;
+}
+
+#dycalendar table tr:nth-child(1) td {
+  background: #2e687338;
+  color: black;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+  background: #2e687338 !important;
+  /* color: black; */
+  font-weight: 500;
+}
+
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.prev-btn {
+  background: white;
+  background: #2e687338;
+  color: black;
+  width: 44px;
+  height: 38px;
+  left: 4px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.next-btn {
+  background: white;
+  background: #2e687338;
+  color: black;
+  width: 44px;
+  height: 38px;
+  right: 4px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year {
+  color: white;
+  color: black;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/***** For Stats *****/
+.statistics-container {
+  position: relative;
+  width: 600px;
+  min-height: 433px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
