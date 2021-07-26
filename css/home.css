@@ -1,4 +1,7 @@
 /* Specific CSS for home (user) page */
+* {
+  color: #2e6873;
+}
 
 .main-section .profile-details {
   transition: all 0.5s ease;
@@ -65,6 +68,7 @@
 #dycalendar table td {
   color: rgb(66, 66, 66);
   color: black;
+  color: #2e6873;
   padding: 10px;
   border-radius: 4px;
   /* font-weight: 600; */
@@ -72,20 +76,34 @@
 
 #dycalendar table td:hover {
   background: white;
-  color: black !important;
+  /* color: black !important; */
+  color: #2e6873 !important;
 }
 
 #dycalendar table tr:nth-child(1) td {
   background: #2e687338;
   color: black;
+  color: #2e6873;
   border-radius: 4px;
   font-weight: 500;
+
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11) !important;
 }
 
 .dycalendar-month-container .dycalendar-today-date,
 .dycalendar-month-container .dycalendar-target-date {
-  background: #2e687338 !important;
+  /* background: #2e687338 !important; */
   /* color: black; */
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2) !important;
+
   font-weight: 500;
 }
 
@@ -94,7 +112,15 @@
   .dycalendar-prev-next-btn.prev-btn {
   background: white;
   background: #2e687338;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+
   color: black;
+  color: #2e6873;
   width: 44px;
   height: 38px;
   left: 4px;
@@ -110,7 +136,15 @@
   .dycalendar-prev-next-btn.next-btn {
   background: white;
   background: #2e687338;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+
   color: black;
+  color: #2e6873;
   width: 44px;
   height: 38px;
   right: 4px;
@@ -122,8 +156,8 @@
 }
 
 .dycalendar-month-container .dycalendar-span-month-year {
-  color: white;
   color: black;
+  color: #2e6873;
   font-size: 1.5em;
   font-weight: 600;
 }
@@ -140,7 +174,82 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(25px);
   border-radius: 10px;
+  padding: 20px 10px 10px;
+}
+
+/* 
+.stat-title {
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 25px 0 5px;
+} */
+
+.content-container {
+  width: 100%;
+  padding: 18px 0px;
+}
+
+.content-title {
+  text-align: center;
+  /* margin: 10px 0 5px; */
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content-box-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+/***** For Tasks *****/
+.task-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-radius: 5px;
+  width: 120px;
+  height: 70px;
+  margin: 5px 20px;
+  padding: 10px;
+}
+
+/***** For Time Spent *****/
+.time-spent-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-radius: 5px;
+  width: 120px;
+  height: 45px;
+  margin: 5px 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/***** For Time Log *****/
+.time-log-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-radius: 5px;
+  width: 100px;
+  height: 45px;
+  margin: 5px 10px;
+  padding: 10px;
+  text-align: center;
 }
