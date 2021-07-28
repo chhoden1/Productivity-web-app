@@ -9,6 +9,10 @@
     <meta name=viewport content="width=device-width, initial-scale = 1">
     <title>Workspace Productivity</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body style="background-color: ghostwhite;">
@@ -22,15 +26,51 @@
     </div>
 
     <div class="split right">
-        <div class="centered">
-            <p class="sign" align="center">Log in</p>
-            <form class="form">
-                <input class="un" type="text" align="center" placeholder="Username">
-                <input class="pass" type="password" align="center" placeholder="Password">
-                <a href="home.html" class="submit" align="center">Log in</a>
-                <p class="signup" align="center"><a href="#">Don't have an account? Sign up.</p>
-        </div>
-    </div>
+        <div class="container">
+            <!--LOGIN FORM-->
+            <form class="form  id=" login">
+                <h1 class="form__title">Login</h1>
+                <div class="form__input-group">
+                    <input type="text" class=" form__input" autofocus placeholder="Username">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class=" form__input" placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit">Continue</button>
+                <p class="form__text">
+                    <a href="#" class="form__link">Forgot your password?</a>
+                </p>
+                <p class="form__text">
+                    <a class="form__link" id="link-CreateAccount">Don't have an account? Create account.</a>
+                </p>
+            </form>
+            <!--SIGN UP FORM-->
+            <form class="form form--hidden" id="createAccount">
+                <h1 class="form__title">Create Account</h1>
+                <div class="form__input-group">
+                    <input type="text" class=" form__input" autofocus placeholder="Username">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" class=" form__input" autofocus placeholder="Email Address">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class=" form__input" placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class=" form__input" placeholder="Confirm password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit">Continue</button>
+                <p class="form__text">
+                    <a class="form__link" id=" link-Login">Already have an account?Log in</a>
+                </p>
+            </form>
+
 </body>
 
 </html>
