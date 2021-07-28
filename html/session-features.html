@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title> SITENAME </title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/session.css">
+    <link rel="stylesheet" href="../css/session-features.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,23 +59,18 @@
   <section class="main-section">
       <div class="text">Session</div>
 
-      <!--Session Form-->
-      <div class="Session-form">
-        <div class="form">
-          <h1>Start a session</h1>
-          <div class="session-form-container">
-          <input class="session-input" type="text" name="session-title" placeholder="Enter a session title"><br>
-          </div>
-          <div class="btn-container">
-            <button onclick="getInputValue()" type="submit" value="Start">Start</button>
-            </div>
-          </div>
-      </div>
+      <div class="session-section">
+        <h1 id="session-title">Session Title</h1>
+        
+        <div class="button-container">
+          <button onclick="endSession()" type="submit" value="End">End</button>
+        </div>
 
+      </div>
   </section>
 
   <script src="../js/main.js"></script>
-  <script src="../js/session.js"></script>
+  <script src="../js/session-features.js"></script>
 </main>
 </body>
 </html>

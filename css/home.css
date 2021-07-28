@@ -1,259 +1,255 @@
-/* Google Font Link */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* Specific CSS for home (user) page */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  color: #2e6873;
 }
 
-main {
-  min-height: 100vh;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-}
-
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 78px;
-  /*background: #11101d;*/
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.842),
-    rgba(255, 255, 255, 0.856)
-  );
-  padding: 6px 14px;
-  z-index: 99;
-  transition: all 0.5s ease;
-}
-.sidebar.open {
-  width: 250px;
-}
-.sidebar .logo-details {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.sidebar .logo-details .icon {
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-.sidebar .logo-details .logo_name {
-  color: #2e6873;
-  font-size: 20px;
-  font-weight: 600;
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-.sidebar.open .logo-details .icon,
-.sidebar.open .logo-details .logo_name {
-  opacity: 1;
-}
-.sidebar .logo-details #btn {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  font-size: 22px;
-  transition: all 0.4s ease;
-  font-size: 23px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-.sidebar.open .logo-details #btn {
-  text-align: right;
-}
-.sidebar i {
-  color: #2e6873;
-  height: 60px;
-  min-width: 50px;
-  font-size: 28px;
-  text-align: center;
-  line-height: 60px;
-}
-.sidebar .nav-list {
-  /*padding: 50% 0 0 0;*/
-  margin-top: 30px;
-  height: 100%;
-}
-.sidebar li {
-  position: relative;
-  margin: 8px 0;
-  list-style: none;
-}
-.sidebar li .tooltip {
-  position: absolute;
-  top: -20px;
-  left: calc(100% + 15px);
-  z-index: 3;
-  background: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 15px;
-  font-weight: 400;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0s;
-}
-.sidebar li:hover .tooltip {
-  opacity: 1;
-  pointer-events: auto;
-  transition: all 0.4s ease;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.sidebar.open li .tooltip {
-  display: none;
-}
-
-.sidebar li a {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  border-radius: 12px;
-  align-items: center;
-  text-decoration: none;
-  transition: all 0.4s ease;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-  background: none;
-}
-.sidebar li a:hover {
-  background: #fff;
-}
-.sidebar li a .links_name {
-  color: #fff;
-  color: #2e6873;
-  font-size: 15px;
-  font-weight: 400;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.4s;
-}
-.sidebar.open li a .links_name {
-  opacity: 1;
-  pointer-events: auto;
-}
-.sidebar li a:hover .links_name,
-.sidebar li a:hover i {
-  transition: all 0.5s ease;
-  color: #11101d;
-}
-.sidebar li i {
-  height: 50px;
-  line-height: 50px;
-  font-size: 18px;
-  border-radius: 12px;
-}
-.sidebar li.profile {
-  position: fixed;
-  height: 60px;
-  width: 78px;
-  left: 0;
-  bottom: -8px;
-  padding: 10px 14px;
-  background: #1d1b31;
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-  background: #2e6873;
+.main-section .profile-details {
   transition: all 0.5s ease;
   overflow: hidden;
+  text-align: center;
 }
-.sidebar.open li.profile {
-  width: 250px;
-}
-.sidebar li .profile-details {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.sidebar li img {
-  height: 45px;
-  width: 45px;
+
+.profile-details img {
+  height: 65px;
+  width: 65px;
   object-fit: cover;
   border-radius: 6px;
   margin-right: 10px;
+  border-radius: 50% 50% 50% 50%;
+  /* border-radius: 6px; */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
 }
-.sidebar li.profile .name,
-.sidebar li.profile .job {
-  font-size: 15px;
-  font-weight: 400;
-  color: #fff;
-  white-space: nowrap;
-}
-.sidebar li.profile .job {
-  font-size: 12px;
-}
-.sidebar .profile #log_out {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  background: #1d1b31;
-  background: white;
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 0px;
-  transition: all 0.5s ease;
-}
-.sidebar.open .profile #log_out {
-  width: 50px;
-  background: none;
-  color: white;
-}
-.home-section {
-  background: white;
-  position: relative;
-  /*background: #e4e9f7;*/
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-  min-height: 100vh;
-  top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
-  transition: all 0.5s ease;
-  z-index: 2;
-  backdrop-filter: blur(2rem);
-}
-.sidebar.open ~ .home-section {
-  left: 250px;
-  width: calc(100% - 250px);
-}
-.home-section .text {
-  display: inline-block;
+
+.name {
+  font-size: 20px;
   color: #2e6873;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 18px;
 }
 
-.circle1,
-.circle2 {
+.user-details {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  position: relative;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/***** For calendar *****/
+.calendar-container {
+  position: relative;
+  width: 400px;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dycalendar {
+  width: 100%;
+  padding: 20px;
+}
+
+#dycalendar table {
+  width: 100%;
+  margin-top: 40px;
+}
+
+#dycalendar table td {
+  color: rgb(66, 66, 66);
+  color: black;
+  color: #2e6873;
+  padding: 10px;
+  border-radius: 4px;
+  /* font-weight: 600; */
+}
+
+#dycalendar table td:hover {
   background: white;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.3)
-  );
-  height: 20rem;
-  width: 20rem;
-  position: absolute;
-  border-radius: 50%;
+  /* color: black !important; */
+  color: #2e6873 !important;
 }
 
-.circle1 {
-  top: 5%;
-  right: 15%;
+#dycalendar table tr:nth-child(1) td {
+  background: #2e687338;
+  color: black;
+  color: #2e6873;
+  border-radius: 4px;
+  font-weight: 500;
+
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11) !important;
 }
-.circle2 {
-  bottom: 6%;
-  left: 30%;
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+  /* background: #2e687338 !important; */
+  /* color: black; */
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2) !important;
+
+  font-weight: 500;
+}
+
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.prev-btn {
+  background: white;
+  background: #2e687338;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+
+  color: black;
+  color: #2e6873;
+  width: 44px;
+  height: 38px;
+  left: 4px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.dycalendar-month-container
+  .dycalendar-header
+  .dycalendar-prev-next-btn.next-btn {
+  background: white;
+  background: #2e687338;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+
+  color: black;
+  color: #2e6873;
+  width: 44px;
+  height: 38px;
+  right: 4px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year {
+  color: black;
+  color: #2e6873;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+/***** For Stats *****/
+.statistics-container {
+  position: relative;
+  width: 600px;
+  min-height: 433px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  padding: 20px 10px 10px;
+}
+
+/* 
+.stat-title {
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 25px 0 5px;
+} */
+
+.content-container {
+  width: 100%;
+  padding: 18px 0px;
+}
+
+.content-title {
+  text-align: center;
+  /* margin: 10px 0 5px; */
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content-box-container {
+  display: flex;
+  justify-content: center;
+}
+
+/***** For Tasks *****/
+.task-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-radius: 5px;
+  width: 120px;
+  height: 70px;
+  margin: 5px 20px;
+  padding: 10px;
+}
+
+/***** For Time Spent *****/
+.time-spent-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-radius: 5px;
+  width: 120px;
+  height: 45px;
+  margin: 5px 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/***** For Time Log *****/
+.time-log-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-radius: 5px;
+  width: 100px;
+  height: 45px;
+  margin: 5px 10px;
+  padding: 10px;
+  text-align: center;
 }

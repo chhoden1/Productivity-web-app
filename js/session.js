@@ -1,26 +1,17 @@
-/* For sidebar */
-let sidebar = document.querySelector(".sidebar");
-let closeBtn = document.querySelector("#btn");
-let logoPlaceholder = document.querySelector("#logo-placeholder");
-
-closeBtn.addEventListener("click", ()=>{
-  sidebar.classList.toggle("open");
-  menuBtnChange();//calling the function(optional)
-});
-
-// following are the code to change sidebar button(optional)
-function menuBtnChange() {
- if(sidebar.classList.contains("open")){
-   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the icons class
-   logoPlaceholder.classList.replace("bxs-square", "bx-check-circle");
-   logoPlaceholder.style.color = "#2e6873";
-
- }else {
-   closeBtn.classList.replace("bx-menu-alt-right","bx-menu"); //replacing the icons class
-   logoPlaceholder.classList.replace("bx-check-circle", "bxs-square");
-   logoPlaceholder.style.color = "transparent";
- }
-}
+/* JS for session form page */
 
 /* For Session Title input */
-
+function getInputValue() {
+    // stores user input in window session storage
+    sessionStorage.setItem("sessionTitle", document.getElementsByClassName('session-input')[0].value);
+    var userInput = sessionStorage.getItem("sessionTitle");
+    // if input is empty
+    if (userInput == "") {
+        // alert the user to input something
+        alert("Please enter a session title");
+    } else {
+        // otherwise, continue on with session
+        console.log(userInput);
+        location.href='session-features.html';
+    }
+}

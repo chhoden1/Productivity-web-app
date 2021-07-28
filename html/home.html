@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title> SITENAME </title>
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/dycalendar.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,11 +55,93 @@
   </div>
   <div class="circle1"></div>
   <div class="circle2"></div>
-  <section class="home-section">
+
+
+  <section class="main-section">
       <div class="text">User</div>
+      <!-- For profile -->
+        <div class="profile-details">
+          <img src="../images/bill-gates.jpg" alt="profileImg">
+          <div class="name_job">
+            <h1 class="name">Bill Gates</h1>
+          </div>
+        </div>
+        
+        <div class="user-details">
+
+          <!-- For calendar -->
+          <div class="box">
+            <div class="calendar-container">
+              <div id="dycalendar">
+              </div>
+            </div>
+          </div>
+
+          <!-- For statistics -->
+          <div class="box">
+            <div class="statistics-container">
+              <!-- <div class="stat-title">
+                <p>Statistics</p>
+              </div> -->
+              
+              <!-- Tasks -->
+              <div class="content-container">
+                <div class="content-title">Tasks</div>
+                <div class="content-box-container">
+                  <div class="task-box">
+                    <p>Total</p>
+                    <p id="total-stat">0</p>
+                  </div>
+                  <div class="task-box">
+                    <p>In Progress</p>
+                    <p id="in-progress-stat">0</p>
+                  </div>
+                  <div class="task-box">
+                    <p>Completed</p>
+                    <p id="completed-stat">0</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Time Spent -->
+              <div class="content-container">
+                <div class="content-title">Time Spent</div>
+                <div class="content-box-container">
+                  <div class="time-spent-box">
+                    <p id="time-spent-stat">0 hr 0 min</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Time Log-->
+              <div class="content-container">
+                <div class="content-title">Time Log</div>
+                <div class="content-box-container">
+                  <div class="time-log-box">
+                    <p id="time-log-stat">+0%</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
   </section>
 
+  <script src="../js/main.js"></script>
   <script src="../js/home.js"></script>
+  <script src="../js/dycalendar.js"></script>
+  <script>
+    dycalendar.draw({
+      target: '#dycalendar',
+      type: 'month',
+      dayformat: 'full',
+      monthformat: 'full',
+      highlighttargetdate: true,
+      prevnextbutton: 'show'
+    })
+  </script>
 </main>
 </body>
 </html>
