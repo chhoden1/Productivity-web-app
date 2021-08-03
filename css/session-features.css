@@ -1,11 +1,15 @@
 /* Specific CSS for session w/ features page */
 
+* {
+  color: #2e6873;
+}
+
 .session-section h1 {
   margin: auto;
   width: 50%;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: #2e6873;
 }
 
@@ -13,6 +17,104 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  margin: 10px;
+}
+
+.middle-features-container {
+  display: flex;
+  margin: 20px 50px;
+  padding: 10px;
+  /* background: pink; */
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.feature-item-container {
+  /* background: green; */
+  padding: 5px;
+  text-align: center;
+}
+
+/***** TASKS ******/
+
+/***** TIMER ******/
+.timer-container {
+  /* background: purple; */
+  position: relative;
+  width: 600px;
+  min-height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  padding: 20px 10px 10px;
+
+  height: 250px;
+  width: 300px;
+}
+
+.timer-options-buttons {
+  padding: 10px;
+}
+
+.timer-options-buttons button {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.timer-digits {
+  /* position: relative; */
+  height: 110px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-digits p {
+  font-size: 95px;
+  font-weight: 600;
+  color: #2e6873;
+}
+
+.timer-button-container {
+  padding: 10px;
+}
+
+.timer-button-container button {
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 50px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+/***** CHAT ******/
+
+/***** END BUTTON ******/
+.button-container {
+  position: absolute;
+  top: 10px;
+  right: 50px;
 }
 
 .button-container button {
@@ -42,3 +144,5 @@
   margin-bottom: 20px;
   border-radius: 3px;
 }
+
+/***** MUSIC ******/

@@ -63,14 +63,40 @@
         <h1 id="session-title">Session Title</h1>
 
         <!-- Tasks, timer, chat -->
-        <div class="middle-features-container">
-          <div class="tasks-container">
+        <div class="middle-features-container space-between">
+          <div class="feature-item-container">
+            <h2>TASKS</h2>
           </div>
 
-          <div class="pomodoro-container">
+          <div class="feature-item-container">
+            <div class="timer-container">
+              <!-- <h2>TIMER</h2> -->
+
+              <div class='timer-options-buttons'>
+                <button class="btn-pomodoro" onclick='pomodoro()'>
+                  <p>Pomodoro</p>
+                </button>
+                <button class="btn-short-break" onclick='shortBreak()'>
+                  <p>Short Break</p>
+                </button>
+                <button class="btn-long-break" onclick='longBreak()'>
+                  <p>Long Break</p>
+                </button>
+              </div>
+
+              <div class="timer-digits">
+                <p>00:00</p>
+              </div>
+
+              <div class="timer-button-container">
+                <button onclick='startTimer()'><p>START</p></button>
+              </div>
+
+            </div>
           </div>
 
-          <div class="chatbox-container">
+          <div class="feature-item-container">
+            <h2>CHAT</h2>
           </div>
         </div>
         
