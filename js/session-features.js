@@ -19,7 +19,7 @@ function pomodoro() {
     document.getElementsByClassName("btn-long-break")[0].style.backgroundColor = "transparent";
     pomodoroBtn = true;
     shortBreakBtn = longBreakBtn = false;
-    console.log("pomodoroBtn: " + pomodoroBtn, "shortBreakBtn: " + shortBreakBtn, "longBreakBtn: " + longBreakBtn);
+    // console.log("pomodoroBtn: " + pomodoroBtn, "shortBreakBtn: " + shortBreakBtn, "longBreakBtn: " + longBreakBtn);
 }
 
 function shortBreak() {
@@ -29,7 +29,7 @@ function shortBreak() {
     document.getElementsByClassName("btn-long-break")[0].style.backgroundColor = "transparent";
     shortBreakBtn = true;
     pomodoroBtn = longBreakBtn = false;
-    console.log("pomodoroBtn: " + pomodoroBtn, "shortBreakBtn: " + shortBreakBtn, "longBreakBtn: " + longBreakBtn, );
+    // console.log("pomodoroBtn: " + pomodoroBtn, "shortBreakBtn: " + shortBreakBtn, "longBreakBtn: " + longBreakBtn, );
 }
 
 function longBreak() {
@@ -39,7 +39,7 @@ function longBreak() {
     document.getElementsByClassName("btn-long-break")[0].style.backgroundColor = "rgba(128, 128, 128, 0.192)";
     longBreakBtn = true;
     pomodoroBtn = shortBreakBtn = false;
-    console.log("pomodoroBtn: " + pomodoroBtn, "shortBreakBtn: " + shortBreakBtn, "longBreakBtn: " + longBreakBtn, );
+    // console.log("pomodoroBtn: " + pomodoroBtn, "shortBreakBtn: " + shortBreakBtn, "longBreakBtn: " + longBreakBtn, );
 }
 
 var timerOn = false;
@@ -67,7 +67,7 @@ function startTimer() {
         resetTimer();
         document.getElementsByClassName("timer-button-container")[0].innerHTML = "<button onclick='startTimer()'><p>START</p></button>";
     }
-    console.log(timerOn);
+    // console.log(timerOn);
 }
 
 var downloadTimer;

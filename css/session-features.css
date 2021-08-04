@@ -59,7 +59,7 @@
 }
 
 .timer-options-buttons {
-  padding: 10px;
+  padding: 3px 10px 10px;
 }
 
 .timer-options-buttons button {
@@ -146,3 +146,13 @@
 }
 
 /***** MUSIC ******/
+.music-container {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 300px;
+  bottom: 15px;
+  width: 100%;
+}
