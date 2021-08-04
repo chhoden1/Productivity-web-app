@@ -156,3 +156,17 @@
   bottom: 15px;
   width: 100%;
 }
+
+iframe {
+  background-color: transparent;
+  opacity: 0.95;
+  /* filter: alpha(opacity=25); IE */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 10px;
+  -moz-box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.514);
+  -webkit-box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.562);
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.788);
+}
