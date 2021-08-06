@@ -388,8 +388,8 @@
 /***** CHAT ******/
 .chat-container {
   position: relative;
-  width: 600px;
-  min-height: 250px;
+  width: 900px;
+  min-height: 450px;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 1 25px 45px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -441,7 +441,7 @@
 }
 
 .full-chat-block {
-  width: 350px;
+  width: 100%;
   background: white;
   text-align: center;
   overflow: auto;
