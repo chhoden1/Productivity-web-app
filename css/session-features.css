@@ -23,7 +23,8 @@
 .middle-features-container {
   display: flex;
   margin: 20px 50px;
-  padding: 10px;
+  margin: 20px;
+  padding: 10px 80px;
   /* background: pink; */
 }
 
@@ -38,12 +39,288 @@
 }
 
 /***** TASKS ******/
+.task-container {
+  max-width: 250px;
+  width: 100%;
+  padding: 20px;
+  border: 12px;
+  overflow: hidden;
+  z-index: 10;
+  backdrop-filter: blur(15px);
+  border-radius: 5px;
+  min-height: 250px;
+  max-width: 300px;
+
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+}
+
+.todoList li {
+  margin-right: 8px;
+}
+
+.todoList::-webkit-scrollbar {
+  width: 6px;
+  padding: 0 0.5rem;
+}
+
+.todoList::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 0 1rem;
+  border-radius: 50px;
+}
+
+.todoList::-webkit-scrollbar-thumb {
+  background: #292a2e;
+  border-radius: 50px;
+}
+
+.todoList::-webkit-scrollbar-thumb:hover {
+  background: #1d1e20;
+  border-radius: 50px;
+}
+
+.task-container header {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+.task-container .inputArea {
+  margin: 20px 0;
+  width: 100%;
+  height: 45px;
+  display: flex;
+}
+
+.inputArea input {
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  font-size: 17px;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border: 0;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  color: #a7a7a7;
+  border: 0;
+
+  color: #8d8d8d;
+}
+
+.inputArea input:focus {
+  background-color: rgba(0, 0, 0, 0.61);
+  background-color: rgba(128, 128, 128, 0.021);
+}
+
+.inputArea button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: #fff;
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background-color: rgba(128, 128, 128, 0.192);
+
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.inputArea button:hover,
+.bottom button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.418);
+}
+
+.inputArea button.active {
+  opacity: 1;
+  pointer-events: auto;
+  animation: rot 0.5s linear;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.task-container .todoList {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.todoList li {
+  position: relative;
+  list-style: none;
+  height: 45px;
+  line-height: 45px;
+  margin-bottom: 8px;
+  background: transparent;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(107, 107, 107, 0.267);
+  color: white;
+  border-radius: 3px;
+  padding: 0 15px;
+  cursor: default;
+  overflow: hidden;
+  border-radius: 50px;
+
+  color: #2e6873;
+  background: rgba(128, 128, 128, 0.192);
+  opacity: 0.8;
+  /* word-wrap: break-word; */
+  /* white-space: initial; */
+  /* display: block; */
+  /* padding: 0 55px 0px 15px;
+  line-height: 25px;
+  line-height: 45px;
+  min-height: 45px;
+  overflow-x: hidden; */
+}
+.todoList li .icon {
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  right: -45px;
+  width: 45px;
+  text-align: center;
+  /* color: rgb(207, 207, 207); */
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  /*   border-radius: 50%; */
+  color: #2e6873;
+}
+
+.todoList li:hover .icon {
+  animation: rotdit 0.5s linear;
+  right: 0px;
+  color: #2e6873;
+}
+
+.todoList li .icon:active {
+  background: rgba(77, 77, 77, 0.747);
+  opacity: 0.5;
+}
+@keyframes rotdit {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  25% {
+    opacity: 0.2;
+    transform: rotate(90deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotate(100deg);
+  }
+  75% {
+    opacity: 0.7;
+    transform: rotate(270deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+.task-container .bottom {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom {
+  color: white;
+}
+
+.bottom button {
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  /* color: white; */
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background-color: rgba(65, 65, 65, 0.534);
+  backdrop-filter: blur(8px);
+  user-select: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: rgba(128, 128, 128, 0.192);
+
+  /*******/
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pendingTasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #5a5a5abd;
+  height: 30px;
+  width: 30px;
+  color: #e4e4e4;
+  border-radius: 50%;
+}
 
 /***** TIMER ******/
 .timer-container {
   /* background: purple; */
   position: relative;
-  width: 600px;
   min-height: 250px;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 1 25px 45px rgba(0, 0, 0, 0.1);
@@ -109,6 +386,22 @@
 }
 
 /***** CHAT ******/
+.chat-container {
+  position: relative;
+  width: 600px;
+  min-height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  padding: 20px 10px 10px;
+
+  height: 250px;
+  width: 300px;
+}
 
 /***** END BUTTON ******/
 .button-container {
@@ -152,7 +445,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 300px;
+  padding: 10px 400px;
   bottom: 15px;
   width: 100%;
 }
