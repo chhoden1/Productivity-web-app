@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="../css/session-features.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
   <main>
   <div class="sidebar">
     <div class="logo-details">
-      <!--<i class='bx bx-check-circle' id="logo" style='color:#2e6873;'></i>-->
       <i class='bx bxs-square' id="logo-placeholder" style='color:rgba(0,0,0,0)'></i>
         <div class="logo_name">SITENAME</div>
         <i class='bx bx-menu' id="btn" ></i>
@@ -64,13 +65,28 @@
 
         <!-- Tasks, timer, chat -->
         <div class="middle-features-container space-between">
+
           <div class="feature-item-container">
-            <h2>TASKS</h2>
+            <!-- TASKS -->
+            <div class="task-container">
+              <h2>TASKS</h2>
+
+              <div class="inputArea">
+                <input type="text" maxLength="34" placeholder="Add New Task">
+                <button><i class="fa fa-plus"></i></button>
+              </div>
+              <ul class="todoList"></ul>
+              <div class="bottom">
+                <span style="display: flex; justify-content: center; align-items: center;"><span class="pendingTasks"></span>&nbsp; Task Left</span>
+                <button>Clean <i class="fa fa-times-circle"></i></button>
+              </div>
+            </div>
+
           </div>
           <div class="feature-item-container">
             <div class="timer-container">
-              <!-- <h2>TIMER</h2> -->
 
+              <!-- <h2>TIMER</h2> -->
               <div class='timer-options-buttons'>
                 <button class="btn-pomodoro" onclick='pomodoro()'>
                   <p>Pomodoro</p>
@@ -95,7 +111,10 @@
           </div>
 
           <div class="feature-item-container">
-            <h2>CHAT</h2>
+            <div class="chat-container">
+              <h2>CHAT</h2>
+
+            </div>
           </div>
         </div>
         
@@ -117,6 +136,7 @@
 
   <script src="../js/main.js"></script>
   <script src="../js/session-features.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </main>
 </body>
 </html>

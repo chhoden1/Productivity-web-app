@@ -112,3 +112,82 @@ function resetTimer() {
 // });
 
 
+/* For Todo List */
+// creates global variables for task feature objects
+const inputBox = document.querySelector(".inputArea input");
+const addBtn = document.querySelector(".inputArea button");
+const todoList = document.querySelector(".todoList");
+const deleteAllBtn = document.querySelector(".bottom button");
+
+
+// if user inputs something, user can click on addBtn
+inputBox.onkeyup = () => {
+    // stores user input into variable
+    let userEnteredValue = inputBox.value;
+    if (userEnteredValue.trim() != 0) {
+        addBtn.classList.add("active");
+    } else {
+        addBtn.classList.remove("active");
+    }
+}
+
+showTasks();
+
+// when addBtn is clicked
+addBtn.onclick = () => {
+    // stores user input into variable
+    let userEnteredValue = inputBox.value;
+    let getLocalStorageData = localStorage.getItem("New Todo");
+    // if no tasks yet
+    if (getLocalStorageData == null) {
+        window.listArray = []; // create new empty list
+    } else {
+        // else, parse data
+        listArray = JSON.parse(getLocalStorageData);
+    }
+    // add user input to the list
+    listArray.push(userEnteredValue);
+    // replace value of "New Todo" item with added task
+    localStorage.setItem("New Todo", JSON.stringify(listArray));
+    showTasks();
+    // addBtn stays inactive until user inputs another task
+    addBtn.classList.remove('active');
+}
+
+function showTasks() {
+    // 
+    let getLocalStorageData = localStorage.getItem("New Todo");
+    if (getLocalStorageData == null) {
+        listArray = [];
+    } else {
+        listArray = JSON.parse(getLocalStorageData);
+    }
+    const pendingTaskNumb = document.querySelector(".pendingTasks");
+    pendingTaskNumb.textContent = listArray.length;
+    if (listArray.length > 0) {
+        deleteAllBtn.classList.add("active");
+    } else {
+        deleteAllBtn.classList.remove("active");
+    }
+    let newLiTag = "";
+    listArray.forEach((element, index) => {
+        newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fa fa-trash" style="color:#2e6873"></i></span></li>`;
+    });
+    todoList.innerHTML = newLiTag;
+    inputBox.value = "";
+}
+
+function deleteTask(index) {
+    let getLocalStorageData = localStorage.getItem("New Todo");
+    listArray = JSON.parse(getLocalStorageData);
+    listArray.splice(index, 1);
+    localStorage.setItem("New Todo", JSON.stringify(listArray));
+    showTasks();
+}
+
+deleteAllBtn.onclick = () => {
+    listArray = [];
+    localStorage.setItem("New Todo", JSON.stringify(listArray));
+    showTasks();
+  console.log("here");
+}
