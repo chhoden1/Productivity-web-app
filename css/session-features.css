@@ -415,10 +415,11 @@
   left: 0;
   right: 0;
   text-align: center;
+  top: 0;
 }
 
 .collapsible {
-  background-color:#2e6873;
+  background-color: #2e6873;
   color: white;
   cursor: pointer;
   padding: 10px;
