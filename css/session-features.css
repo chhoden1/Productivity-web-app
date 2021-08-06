@@ -405,7 +405,7 @@
 
 .chat-bar-collapsible {
   /* position: fixed; */
-  bottom: 0;
+  bottom: 10;
   right: 50px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
@@ -494,14 +494,14 @@
 /* Chat bubbles */
 
 #userInput {
-  width: 75%;
+  width: 50%;
 }
 
 .input-box {
   float: left;
   border: none;
   box-sizing: border-box;
-  width: 100%;
+  width: 70%;
   border-radius: 10px;
   padding: 10px;
   font-size: 16px;
@@ -513,7 +513,7 @@
 .userText {
   color: white;
   font-family: Helvetica;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: normal;
   text-align: right;
   clear: both;
@@ -535,7 +535,7 @@
   color: #000;
   font-family: Helvetica;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 12px;
   text-align: left;
 }
 
