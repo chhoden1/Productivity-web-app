@@ -5,7 +5,30 @@ document.getElementById("session-title").innerHTML = sessionStorage.getItem("ses
 
 /* To end session */
 function endSession() {
+    storeData();
     location.href='session.html';
+}
+
+function storeData () {
+    var oldTimeData = localStorage.getItem("totalTime");
+    if (oldTimeData === null) {
+        totalTime = {
+            seconds: 0
+        };
+        localStorage.setItem("totalTime", JSON.stringify(totalTime));
+    }
+    calculateTime();
+}
+
+function calculateTime() {
+    // seconds, minutes, hours, days
+    var time = JSON.parse(localStorage.getItem("totalTime"));
+
+    // add counter to seconds
+    time.seconds += counter;
+
+    localStorage.setItem('totalTime', JSON.stringify(time));
+    console.log("Seconds: " + time.seconds);
 }
 
 /* For Timer */
@@ -191,3 +214,16 @@ deleteAllBtn.onclick = () => {
     showTasks();
   console.log("here");
 }
+
+
+/* Timer for time logs */
+// let counter = 0;
+window.onload = function(){
+    setInterval(count, 1000);
+  };
+  
+  let counter = 0;
+  function count(){
+    counter++;
+    // console.log("Count: " + (counter + JSON.parse(localStorage.getItem("totalTime")).seconds));
+  }
