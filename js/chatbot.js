@@ -145,7 +145,7 @@ function firstBotMessage() {
     let time = getTime();
 
     $("#chat-timestamp").append(time);
-    document.getElementById("userInput").scrollIntoView(false);
+    // document.getElementById("userInput").scrollIntoView(false);
 
 }
 
@@ -156,7 +156,7 @@ function getHardResponse(userText) {
     let botHTML = '<p class="botText"><span>' + botResponse + '</span></p>';
     $("#chatbox").append(botHTML);
 
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    // document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
 function getResponse() {
@@ -170,7 +170,7 @@ function getResponse() {
 
     $("#textInput").val("");
     $("#chatbox").append(userHTML);
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    // document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
     setTimeout(() => {
         getHardResponse(userText);
@@ -182,7 +182,7 @@ function buttonSendText(sampleText) {
 
     $("#textInput").val("");
     $("#chatbox").append(userHTML);
-    document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    // document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
 function sendButton() {
