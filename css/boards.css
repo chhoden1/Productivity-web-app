@@ -1,186 +1,286 @@
 /* CSS for Boards page commit trial */
 
-*{
-    padding: 0;
-    margin: 0;
+/* * {
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    /*background-color: rgb(30, 30, 95);*/
-    position: relative;
-    font-family: "Open Sans";
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    text-align: center;
-    
-    
-
+body {
+  position: relative;
+  font-family: "Open Sans";
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  text-align: center;
 }
 
-
-
-button{
-    outline: none;
-    cursor: pointer;
+button {
+  outline: none;
+  cursor: pointer;
 }
 
-#addTodoListDiv{
-    margin-left: 2em;
-    margin-top: 4em;
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+#addTodoListDiv {
+  margin-left: 2em;
+  margin-top: 4em;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-#addTodoListDiv button{
-    margin-left: 0.5em;
+#addTodoListDiv button {
+  margin-left: 0.5em;
 }
 
-
-#root{
-    margin: 1em;
-    /*border: 1px solid grey;*/
-    /*display: flex;*/
-    min-width: 1200px;
+#root {
+  margin: 1em;
+  display: flex;
+  min-width: 1200px;
 }
 
+.todoList {
+  border-radius: 4px;
+  min-height: 100px;
 
-.todoList{
-    /*border: 1px solid red;*/
-    border-radius: 4px;
-    min-height: 100px;
-    
-    padding: 0.7em;
-    margin: 1em 0 1em 1em;
+  padding: 0.7em;
+  margin: 1em 0 1em 1em;
 
-    position: relative;
-    margin: 0 50px;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content:center;
-    align-items: center;
-
-
-    
+  position: relative;
+  margin: 0 50px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.todoList h2{
-    font-size: 1em;
-    margin-bottom: 0.5em;
+.todoList h2 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
 }
 
-#to-do-list-button{
-    margin-left: 0.5em;
+#to-do-list-button {
+  margin-left: 0.5em;
 }
 
-.card{
-    /*border: 1px solid blue;*/
-    border-radius: 4px;
-    border-bottom: rgb(180, 180, 180) 1px solid;
-    background: white;
-    margin: 0.5em 0 0 0;
-    padding: 0.5em;
-    font-size: 0.9em;
-    position: relative;
+.card {
+  border-radius: 4px;
+  border-bottom: rgb(180, 180, 180) 1px solid;
+  background: white;
+  margin: 0.5em 0 0 0;
+  padding: 0.5em;
+  font-size: 0.9em;
+  position: relative;
 
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.card button{
-    visibility: hidden;
-    height: max-content;
+.card button {
+  visibility: hidden;
+  height: max-content;
 
-    background: none;
-    border: none;
-    padding: 0.3em;
-    
+  background: none;
+  border: none;
+  padding: 0.3em;
 }
 
-
-.card:hover button{
-    visibility: visible;
-    backdrop-filter: blur(10px);
+.card:hover button {
+  visibility: visible;
+  backdrop-filter: blur(10px);
 }
 
-.card button:hover{
-    background-color: rgb(235, 235, 235);
-    border-radius: 4px;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
+.card button:hover {
+  background-color: rgb(235, 235, 235);
+  border-radius: 4px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
 }
 
+.menuContainer {
+  display: flex;
 
-.menuContainer{
-    display: flex;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
 }
 
-.menu{
-    top: 0;
-    left: 0;
-    background-color: rgb(235, 235, 235);
-    width: 500px;
-    min-height: 300px;
+.menu {
+  top: 0;
+  left: 0;
+  background-color: rgb(235, 235, 235);
+  width: 500px;
+  min-height: 300px;
 
-    margin: auto;
+  margin: auto;
 
-    padding: 1em;
-    border-radius: 4px;
-    
+  padding: 1em;
+  border-radius: 4px;
 }
 
-.menuTitle{
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-bottom: 1em;
+.menuTitle {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
 
-.menuDescription{
-    margin-bottom: 2em;
-    line-height: 1.5em;
+.menuDescription {
+  margin-bottom: 2em;
+  line-height: 1.5em;
 }
 
-.menuDescription textarea{
-    width: 100%;
-    height: 5em;
-    padding: 0.5em;
-    font-size: 1.1em;
+.menuDescription textarea {
+  width: 100%;
+  height: 5em;
+  padding: 0.5em;
+  font-size: 1.1em;
 }
 
-
-
-.comment{
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 0.5em;
-    padding: 0.5em;
-    font-size: 0.8em;
+.comment {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  font-size: 0.8em;
 }
 
-.commentsInput{
-    margin-right: 0.5em;
+.commentsInput {
+  margin-right: 0.5em;
 }
 
-.btn-save{
-    background-color: #5aac44;
-    color: white;
-    border: none;
-    border-radius: 4px;
+.btn-save {
+  background-color: #5aac44;
+  color: white;
+  border: none;
+  border-radius: 4px;
 
-    padding: 0.5em;
-    margin-top: 0.5em;
-    
+  padding: 0.5em;
+  margin-top: 0.5em;
+} */
+/* 
+body {
+  display: flex;
+  align-items: start;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+} */
+
+/********* UPDATE ************/
+
+body {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+
+.main-section {
+  background-color: #0279bf;
+  width: 100%;
+  background: transparent;
+
+  background: white;
+  position: relative;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  /* width: 100%; */
+  transition: all 0.5s ease;
+  backdrop-filter: blur(0.3rem);
+  min-width: 400vh;
+}
+
+.main-wrapper {
+  display: flex;
+  align-items: start;
+  padding: 20px;
+}
+
+div {
+  border-radius: 3px;
+}
+
+#main {
+  display: flex;
+  align-items: start;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.editable {
+  user-select: none;
+  outline: none;
+  margin: 7px;
+  padding: 10px;
+  cursor: pointer !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.editing {
+  background: white;
+  color: #172b4d !important;
+  box-shadow: inset 0px 0px 0px 2px #0279bf;
+}
+
+.editing:hover {
+  background: white !important;
+}
+
+.card {
+  background: white;
+  border-bottom: 1px solid #aaa;
+}
+
+.list {
+  min-width: 280px;
+  margin: 10px 5px;
+  position: relative;
+  background: #dfe1e6;
+}
+
+.add-list {
+  min-width: 280px;
+  margin: 10px 5px;
+  /* position: relative; */
+  background: rgba(0, 0, 0, 0.12);
+  color: hsla(0, 0%, 100%, 0.8);
+
+  width: 280px;
+  max-width: 280px;
+}
+
+.ghost {
+  opacity: 0.1;
+  color: #000;
+  background-color: #000;
+}
+
+.add-card {
+  width: calc(100% - 35px);
+  display: inline-block;
+  padding: 10px;
+  margin-top: 0px;
+  color: gray;
+  text-decoration: none;
+}
+
+.add-card:hover {
+  background-color: rgba(9, 30, 66, 0.13);
+}
+
+.del {
+  font-weight: 600;
+  color: gray;
 }
