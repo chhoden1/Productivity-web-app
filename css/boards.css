@@ -186,7 +186,7 @@ body {
   width: 100%;
   background: transparent;
 
-  background: white;
+  /* background: white; */
   position: relative;
   background: linear-gradient(
     to right bottom,
@@ -240,14 +240,26 @@ div {
 
 .card {
   background: white;
-  border-bottom: 1px solid #aaa;
+  /* border-bottom: 1px solid #aaa; */
+
+  background-color: rgba(9, 30, 66, 0.082);
+  background-color: rgba(9, 30, 66, 0.13);
 }
 
 .list {
   min-width: 280px;
   margin: 10px 5px;
   position: relative;
-  background: #dfe1e6;
+  /* background: #dfe1e6; */
+
+  /* background: rgba(255, 255, 255, 0.05); */
+  backdrop-filter: blur(0.1px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  /* border-top-left-radius: 3px;
+  border-top-right-radius: 3px; */
+  border-radius: 5px;
 }
 
 .add-list {
