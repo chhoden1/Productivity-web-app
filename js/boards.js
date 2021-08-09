@@ -430,7 +430,7 @@ function elBlurHandler(e) {
     title.appendChild(text);
     addList.appendChild(title);
     // document.querySelector('body').appendChild(addList);
-    document.querySelector('.main-section').appendChild(addList);
+    document.querySelector('#main').appendChild(addList);
   }
   
   initDelete();
