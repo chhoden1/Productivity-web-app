@@ -1,39 +1,53 @@
-/* body {
-  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-} */
+/* CSS for Boards page commit trial */
 
-/* .main-section {
+body {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+
+.main-section {
   background-color: #0279bf;
   width: 100%;
   background: transparent;
 
+  /* background: white; */
   position: relative;
   background: linear-gradient(
     to right bottom,
     rgba(255, 255, 255, 0.7),
     rgba(255, 255, 255, 0.3)
   );
-
+  /* width: 100%; */
   transition: all 0.5s ease;
   backdrop-filter: blur(0.3rem);
   min-width: 400vh;
-} */
-
-.boards-title {
-  color: #2e6873;
-  font-size: 40px;
-  font-weight: 900;
-  padding: 10px 10px 30px 0;
 }
 
 .main-wrapper {
   display: flex;
-  /* align-items: start; */
-  /* padding: 40px; */
-  flex-direction: column;
-  flex-wrap: wrap;
-  /* max-width: 400px; */
-  padding: 10px;
+  align-items: start;
+  padding: 20px;
+}
+
+.boards-title {
+  color: #2e6873;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 25px 10px;
+}
+
+.boards-title a:link {
+  color: green;
+  text-decoration: none;
+}
+
+.boards-title a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.boards-title a:visited {
+  color: grey;
+  text-decoration: none;
 }
 
 div {
@@ -42,32 +56,21 @@ div {
 
 #main {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   align-items: start;
 }
 
 .title {
   font-weight: 600;
-  font-size: 20px;
 }
 
 .editable {
-  /* user-select: none;
+  user-select: none;
   outline: none;
   margin: 7px;
   padding: 10px;
   cursor: pointer !important;
   display: flex;
-  justify-content: space-between; */
-
-  user-select: none;
-  outline: none;
-  cursor: pointer !important;
-  border-radius: 5px;
-  margin: 7px;
-  padding: 10px;
-  /* width: 500px; */
+  justify-content: space-between;
 }
 
 .editing {
@@ -89,7 +92,7 @@ div {
 }
 
 .list {
-  min-width: 400px;
+  min-width: 280px;
   margin: 10px 5px;
   position: relative;
   /* background: #dfe1e6; */
@@ -102,18 +105,17 @@ div {
   /* border-top-left-radius: 3px;
     border-top-right-radius: 3px; */
   border-radius: 5px;
-
-  width: 500px;
 }
 
 .add-list {
+  min-width: 280px;
   margin: 10px 5px;
-  position: relative;
+  /* position: relative; */
   background: rgba(0, 0, 0, 0.12);
   color: hsla(0, 0%, 100%, 0.8);
 
   width: 280px;
-  width: 500px;
+  max-width: 280px;
 }
 
 .ghost {
@@ -122,19 +124,20 @@ div {
   background-color: #000;
 }
 
+.add-card {
+  width: calc(100% - 35px);
+  display: inline-block;
+  padding: 10px;
+  margin-top: 0px;
+  color: gray;
+  text-decoration: none;
+}
+
+.add-card:hover {
+  background-color: rgba(9, 30, 66, 0.13);
+}
+
 .del {
   font-weight: 600;
   color: gray;
-}
-
-.removable {
-  user-select: none;
-  outline: none;
-  margin: 25px;
-  cursor: pointer !important;
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 0;
-  border-radius: 5px;
-  color: #2e6873;
 }

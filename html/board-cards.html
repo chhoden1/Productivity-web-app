@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title> SITENAME </title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/boards.css">
+    <link rel="stylesheet" href="../css/board-cards.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,7 @@
           <span class="tooltip">User</span>
         </li>
         <li>
-          <a href="#">
+          <a href="boards.html">
             <i class='bx bx-grid-alt'></i>
             <span class="links_name">Boards</span>
           </a>
@@ -56,35 +56,56 @@
       </ul>
     </div>
 
-  <div class="circle1"></div>
-  <div class="circle2"></div>
+  <!-- <div class="circle1"></div>
+  <div class="circle2"></div> -->
   <!--Boards For Group New-->
 
 
   <section class="main-section">
     <!-- <div class="text">Boards</div> -->
+    <div class="boards-title"><a href="boards.html">Boards</a> > Board #1</div>
+    <!-- <div id="addTodoListDiv">
+        <input id="addTodoListInput" class="comment">
+        <button id="addTodoListButton" class="btn-save">Add new to-do list</button>
+    </div>
+    
+    <div id="root"></div> -->
 
 
     <!-- //////// -->
     <div class="main-wrapper">
-      <div class="boards-title">Boards</div>
       <div id="main">
         <div class="list">
-          <div class="title removable" onclick="takeToBoard()">Board #1</div>
+          <div class="title removable editable">This is a list</div>
           <div class="content">
+            <div class="card removable editable">This is a card</div>
+            <div class="card removable editable">Look, another card!</div>
           </div>
+          <div class="add-card editable">Add another card</div>
+        </div>
+        <div class="list">
+          <div class="title removable editable">Another list</div>
+          <div class="content">
+            <div class="card removable editable">Hello world!</div>
+          </div>
+          <div class="add-card editable">Add another card</div>
+        </div>
+        <div class="list">
+          <div class="title removable editable">Empty list</div>
+          <div class="content"></div>
+          <div class="add-card editable">Add another card</div>
         </div>
       </div>
     
       <div class="add-list">
-        <div id="add-board" class="title editable">Add another board</div>
+        <div class="title editable">Add another list</div>
       </div>
     </div>
   </section>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.6.0/Sortable.js"></script>
   <script src="../js/main.js"></script>
-  <script src="../js/boards.js"></script>
+  <script src="../js/board-cards.js"></script>
 </main>
 
 

@@ -1,4 +1,3 @@
-/* JS for boards page */ 
 
 var main = document.querySelector('#main');
 
@@ -99,7 +98,7 @@ function elKeypressHandler(e) {
     el.parentElement.className = 'list pending';
   }
   
-//   el.removeEventListener('keypress', elKeypressHandler);
+  // el.removeEventListener('keypress', elKeypressHandler);
 }
 
 function elBlurHandler(e) {
@@ -108,14 +107,12 @@ function elBlurHandler(e) {
   el.classList.remove('editing');
   
   if (el.classList.contains('pending')) {
-    // el.className = 'card removable editable';
-    el.className = 'card removable';
-    // var newEl = document.createElement('div');
-    // newEl.className = 'add-card editable';
-    // newEl.className = 'add-card';
-    // var text = document.createTextNode('Add another card');
-    // newEl.appendChild(text);
-    // el.parentNode.appendChild(newEl);
+    el.className = 'card removable editable';
+    var newEl = document.createElement('div');
+    newEl.className = 'add-card editable';
+    var text = document.createTextNode('Add another card');
+    newEl.appendChild(text);
+    el.parentNode.appendChild(newEl);
     
     el.parentNode.querySelector('.content').appendChild(el);
   }
@@ -126,17 +123,16 @@ function elBlurHandler(e) {
   
   if (el.parentElement.className === 'list pending') {
     el.parentElement.className = 'list';
-    // el.className = 'title removable editable';
-    el.className = 'title removable';
+    el.className = 'title removable editable';
     var newContent = document.createElement('div');
     newContent.className = 'content';
     el.parentElement.appendChild(newContent);
     
-    // var newEl = document.createElement('div');
-    // newEl.className = 'add-card editable';
-    // var text = document.createTextNode('Add another card');
-    // newEl.appendChild(text);
-    // el.parentNode.appendChild(newEl);
+    var newEl = document.createElement('div');
+    newEl.className = 'add-card editable';
+    var text = document.createTextNode('Add another card');
+    newEl.appendChild(text);
+    el.parentNode.appendChild(newEl);
     
     document.querySelector('#main').appendChild(el.parentElement);
     
@@ -149,7 +145,6 @@ function elBlurHandler(e) {
     var text = document.createTextNode('Add another list');
     title.appendChild(text);
     addList.appendChild(title);
-
     // document.querySelector('body').appendChild(addList);
     document.querySelector('#main').appendChild(addList);
   }
@@ -158,8 +153,7 @@ function elBlurHandler(e) {
 }
 
 function initDelete() {
-//   var editables = document.querySelectorAll('.editable');
-var editables = document.querySelectorAll('.removable');
+  var editables = document.querySelectorAll('.editable');
 
   for (item of editables) {
     item.addEventListener('mouseenter', elMouseEnterHandler);
@@ -199,8 +193,4 @@ function deleteHandler(e) {
   if (parent.classList.contains('title')) {
     parent.parentElement.parentElement.removeChild(parent.parentElement);
   }
-}
-
-function takeToBoard() {
-    location.href='board-cards.html';
 }

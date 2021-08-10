@@ -227,6 +227,9 @@ main {
   z-index: 2;
   /* backdrop-filter: blur(2rem); */
   backdrop-filter: blur(0.3rem);
+
+  color: #2e6873;
+  padding: 50px;
 }
 .sidebar.open ~ .main-section {
   left: 250px;
