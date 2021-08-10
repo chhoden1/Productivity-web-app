@@ -41,6 +41,7 @@ function firstBotMessage() {
 
     $("#chat-timestamp").append(time);
     // document.getElementById("userInput").scrollIntoView(false);
+    scrollDown();
 
 }
 
@@ -52,6 +53,7 @@ function getHardResponse(userText) {
     $("#chatbox").append(botHTML);
 
     // document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    scrollDown();
 }
 
 function getResponse() {
@@ -66,6 +68,7 @@ function getResponse() {
     $("#textInput").val("");
     $("#chatbox").append(userHTML);
     // document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    scrollDown();
 
     setTimeout(() => {
         getHardResponse(userText);
@@ -78,6 +81,7 @@ function buttonSendText(sampleText) {
     $("#textInput").val("");
     $("#chatbox").append(userHTML);
     // document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    scrollDown();
 }
 
 function sendButton() {
@@ -95,3 +99,8 @@ $("#textInput").keypress(function(e) {
         getResponse();
     }
 });
+
+// scrolls down to most recent message
+function scrollDown() {
+    document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
+}
