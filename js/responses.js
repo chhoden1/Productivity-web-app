@@ -32,13 +32,19 @@ function getBotResponse(input) {
     } else if (input == "hi") {
         return "Hey! How are you doing?";
     } else if (input == "I am doing good") {
-        return "That's awesome!";
+        return "That's awesome! What can I help you with today?";
     }else if (input == "I am stressed") {
         return "Enjoy a cup of coffee!";
     }else if (input == "good") {
-        return "That's great!";
+        return "That's great! How can I help you?";
     }else if (input == "I had a stressful day.") {
         return "You need to relax.";
+    }else if (input == "I am stressed.") {
+        return "Try listening to songs.";
+    }else if (input == "I am tired.") {
+        return "Get a power nap.";
+    }else if (input == "feeling tired") {
+        return "Get some snacks and take a break from your study session.";
     }else {
         return "Try asking something else!";
     }
