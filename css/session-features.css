@@ -530,6 +530,7 @@
   clear: both;
 
   font-size: 14px;
+  padding: 5px 0;
 }
 
 .userText span {
@@ -542,6 +543,8 @@
   max-width: 80%;
   margin-right: 10px;
   animation: floatup 0.5s forwards;
+
+  text-align: left;
 }
 
 .botText {
@@ -552,6 +555,7 @@
   text-align: left;
 
   font-size: 14px;
+  padding: 5px 0;
 }
 
 .botText span {
