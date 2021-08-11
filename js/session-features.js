@@ -227,3 +227,7 @@ window.onload = function(){
     counter++;
     // console.log("Count: " + (counter + JSON.parse(localStorage.getItem("totalTime")).seconds));
   }
+  
+  function logout(){
+    location.href='index.html';
+}

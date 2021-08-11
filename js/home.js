@@ -16,3 +16,7 @@ var time = JSON.parse(localStorage.getItem("totalTime"));
 
 // document.getElementById("time-spent-stat").innerHTML = `<p id="time-spent-stat">${time.hours} hr ${time.minutes} min</p>`;
 document.getElementById("time-spent-stat").innerHTML = `<p id="time-spent-stat">${Math.floor(spentHours)} hr ${Math.floor(spentMins)} min</p>`;
+
+function logout(){
+    location.href='index.html';
+}

@@ -15,3 +15,7 @@ function getInputValue() {
         location.href='session-features.html';
     }
 }
+
+function logout(){
+    location.href='index.html';
+}
