@@ -1,7 +1,7 @@
 var jwt = localStorage.getItem("jwt");
-if (jwt != null) {
-  window.location.href = '../html/home.html'
-}
+// if (jwt != null) {
+//   window.location.href = '../html/home.html'
+// }
 
 function login() {
   const username = document.getElementById("username").value;
