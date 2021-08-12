@@ -1,8 +1,76 @@
 /* CSS for Boards page commit trial */
 
+/* * {
+  color: #2e6873;
+} */
+
 body {
   background: linear-gradient(to right top, #65dfc9, #6cdbeb);
 }
+
+/****** USER *******/
+.user-list {
+  /* text-align: center; */
+  /* display: inline-block;
+  flex-direction: row; */
+
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 10px 0 10px 480px;
+  left: 0;
+  align-items: flex-start;
+  /* position: absolute; */
+}
+
+.user-list button {
+  border: none;
+  color: #fff;
+  /* margin-left: 5px; */
+  font-size: 21px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%; */
+  transition: all 0.3s ease;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 2px;
+
+  margin: 10px 0 0 0;
+  color: #2e6873;
+}
+
+.profile-details img {
+  height: 55px;
+  width: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+  border-radius: 50% 50% 50% 50%;
+  /* border-radius: 6px; */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.button-wrap {
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* List */
 
 .main-section {
   background-color: #0279bf;
