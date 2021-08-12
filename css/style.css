@@ -22,7 +22,32 @@ body{
   .left {
     left: 0;
     background-color:lightseagreen;
+   
   }
+  .title{
+    align-items: center;
+    justify-content:center;
+    margin-left: 50px;
+    display: flex;
+    
+    
+  }
+  
+  
+  
+  .centered{
+    display: flex;
+    width: 70%;
+    height: 90vh;
+    align-items: center;
+    justify-content:center;
+    padding-left: 2px;
+    float: right;
+    margin-right: 100px;
+    
+    
+  }
+  
   
   /* Control the right side */
   .right {
