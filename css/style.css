@@ -28,6 +28,12 @@ body {
   padding: 40px;
 }
 
+.bx-check-circle {
+  color: white;
+  font-size: 80px;
+  padding: 0 10px 0 0;
+}
+
 /* Control the right side */
 .right {
   right: 0;
