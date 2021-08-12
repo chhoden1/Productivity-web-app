@@ -45,6 +45,8 @@ function getBotResponse(input) {
         return "Get a power nap.";
     }else if (input == "feeling tired") {
         return "Get some snacks and take a break from your study session.";
+    }else if (input == "feeling stressed") {
+        return "Try listening to songs.";
     }else {
         return "Try asking something else!";
     }
